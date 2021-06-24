@@ -9,7 +9,7 @@ file = open('autos.csv', 'w', encoding='utf-8_sig', newline='\n')
 obj = csv.writer(file)
 obj.writerow(['დასახელება', 'ფასი', 'მოკლე აღწერა', 'ლინკი'])
 
-for i in range(0, 5):
+for i in range(1, 5):
     url1 = url + str(i)
     resp = requests.get(url1)
     text = resp.text
@@ -23,8 +23,8 @@ for i in range(0, 5):
             title = car_title.a.text
             car_url = car_title.a['href']
             short_disc = car.find('li', {'class', 'fields'}).text
-            price = car.find('li', {'class', 'system'}).text
-            obj.writerow([title, price, short_disc, car_url])
+            price = car.find('li', {'class', 'system'}).text.replace(',''')
+            obj.writerow([title,short_disc, price])
     sleep(randint(15, 20))
 
 
