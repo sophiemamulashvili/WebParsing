@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 style="margin-left:20px;">Hello {{ session['username'] }}</h2>
+
+{%for car in all_cars%}
+<div class="card" style="width: 80rem; margin-left:30px">
+  <div class="card-body">
+    <h5 class="card-title" style="margin-left:30px">{{car.title}}</h5>
+        <img src="{{car.img}}" class="card-img-top" alt="..." style="width:200px;margin-left:30px">
+
+    <p class="card-text" style="margin-left:30px">{{car}}</p>
+    <a href="{{car.url}}" id="btn" class="btn btn-primary" style="margin-left:30px">დადადით საყიდლად </a>
+  </div>
+</div>
+{%endfor%}
+
+
+<a style="margin-left:20px;" href="{{url_for('home')}}"> მთავარი გვერდი </a>
+{% endblock %}
+
+

@@ -1,0 +1,34 @@
+body {
+    background-color: #d6adff
+}
+h1{
+    color:#6f42c1
+}
+h2{
+    color:#6f42c1
+}
+h3{
+    color:#6f42c1
+}
+.mb-3{
+    color:#6f42c1
+}
+#add{
+    background-color:#6f42c1;
+    border-color:#6f42c1;
+}
+#login{
+    background-color:#6f42c1;
+    border-color:#6f42c1;
+}
+.container-fluid{
+    color:#white;
+    background-color:#6f42c1;
+}
+.card{
+background-color:#F6E4FF
+}
+#btn{
+    background-color:#6f42c1;
+    border-color:#6f42c1;
+}
